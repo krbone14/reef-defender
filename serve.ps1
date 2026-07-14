@@ -48,6 +48,20 @@ try {
 
     # try/catch par requête : une requête bizarre ne doit pas tuer le serveur
     try {
+      # Petit bonus développeur : POST /capture.png enregistre une image
+      # envoyée par le navigateur (pour faire des captures du canvas
+      # depuis la console : canvas.toBlob(b => fetch('/capture.png',
+      # { method: 'POST', body: b }))). Uniquement ce nom de fichier,
+      # uniquement en local — aucun risque.
+      if ($requete.HttpMethod -eq 'POST' -and $requete.Url.AbsolutePath -eq '/capture.png') {
+        $memoire = New-Object System.IO.MemoryStream
+        $requete.InputStream.CopyTo($memoire)
+        [System.IO.File]::WriteAllBytes((Join-Path $racine 'capture.png'), $memoire.ToArray())
+        $reponse.StatusCode = 204
+        $reponse.Close()
+        continue
+      }
+
       # Chemin demandé -> fichier sur le disque ("/" -> index.html)
       $chemin = $requete.Url.AbsolutePath.TrimStart('/')
       if ([string]::IsNullOrEmpty($chemin)) { $chemin = 'index.html' }

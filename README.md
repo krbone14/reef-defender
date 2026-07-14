@@ -1,5 +1,9 @@
 # 🤿 Reef Defender
 
+<p align="center">
+  <img src="capture.png" alt="Reef Defender — vague 1 : un barracuda pique sur le plongeur" width="420">
+</p>
+
 Un shoot'em up vertical dans l'esprit de **Galaga**, sur le thème de la plongée
 sous-marine. Tu pilotes un plongeur armé d'un harpon et tu défends un récif
 corallien contre des vagues de créatures marines qui entrent en formations
