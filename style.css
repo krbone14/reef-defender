@@ -1,0 +1,23 @@
+/* Reef Defender — mise en page de la fenêtre.
+   Le canvas garde toujours son ratio 480×640 : c'est le JS (viewport.js)
+   qui calcule sa taille à l'écran. Ici on se contente de le centrer
+   sur un fond noir (le « letterboxing » : des bandes noires autour). */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;               /* pas de barres de défilement */
+}
+
+body {
+  display: flex;                  /* centre le canvas... */
+  align-items: center;            /* ...verticalement */
+  justify-content: center;        /* ...et horizontalement */
+}
+
+canvas {
+  display: block;
+  touch-action: none;             /* empêche le navigateur de scroller/zoomer au doigt */
+}

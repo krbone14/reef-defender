@@ -1,0 +1,9 @@
+# Poussières Windows
+Thumbs.db
+Desktop.ini
+
+# Réglages locaux de Claude Code (propres à chaque machine)
+.claude/settings.local.json
+
+# Rien d'autre à ignorer : le jeu est 100 % statique,
+# sans dépendances ni fichiers générés.
