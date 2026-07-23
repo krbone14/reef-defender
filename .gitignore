@@ -7,3 +7,8 @@ Desktop.ini
 
 # Rien d'autre à ignorer : le jeu est 100 % statique,
 # sans dépendances ni fichiers générés.
+
+# Outillage du skill agent run-reefdefender (Playwright + libs système
+# téléchargées localement) : régénéré par setup.sh, pas à versionner.
+.claude/skills/run-reefdefender/node_modules/
+.claude/skills/run-reefdefender/system-libs/

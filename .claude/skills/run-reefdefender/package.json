@@ -1,0 +1,9 @@
+{
+  "name": "run-reefdefender-driver",
+  "private": true,
+  "type": "module",
+  "description": "Agent-only tooling to drive Reef Defender in a headless browser. Not part of the game itself (see repo README: the game has zero dependencies).",
+  "dependencies": {
+    "playwright": "1.61.1"
+  }
+}
